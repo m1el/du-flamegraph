@@ -1,0 +1,5 @@
+#!/bin/sh
+flamegraph.pl --encoding "UTF-8" --plainrect \
+ --title "Disk usage" --countname "bytes" \
+ --nametype "file" --width 1900 --minwidth 0.05 \
+| iconv -f UTF-8 -t UTF-8 -c

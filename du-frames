@@ -1,0 +1,3 @@
+#!/bin/sh
+find $1 -type f | xargs -n32 -d'\n' -- du -ab \
+| awk -F'\t' '{print $2" "$1;}' | sed 's#/##;s#/#;#g'
